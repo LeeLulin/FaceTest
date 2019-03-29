@@ -12,7 +12,7 @@ def CatchPICFromVideo(window_name, camera_idx, catch_pic_num, path_name):
     cap = cv2.VideoCapture(camera_idx)
 
     # 告诉OpenCV使用人脸识别分类器
-    classfier = cv2.CascadeClassifier("/home/student/桌面/haarcascade_frontalface_alt.xml")
+    classfier = cv2.CascadeClassifier("./haarcascade_frontalface_alt.xml")
 
     # 识别出人脸后要画的边框的颜色，RGB格式
     color = (0, 255, 0)
@@ -65,6 +65,6 @@ if __name__ == '__main__':
     if len(sys.argv) != 1:
         print("Usage:%s camera_id face_num_max path_name\r\n" % (sys.argv[0]))
     else:
-        CatchPICFromVideo("截取人脸", 0, 1000, '/home/student/PycharmProjects/FaceTest/faceImage/image2')
+        CatchPICFromVideo("截取人脸", 0, 1000, './faceImage/image0')
 
 

@@ -19,7 +19,7 @@ if __name__ == '__main__':
     cap = cv2.VideoCapture(0)
 
     # 人脸识别分类器本地存储路径
-    cascade_path = "/home/student/桌面/haarcascade_frontalface_alt.xml"
+    cascade_path = "./haarcascade_frontalface_alt.xml"
 
     # 循环检测识别人脸
     while True:
@@ -49,7 +49,7 @@ if __name__ == '__main__':
                     cv2.rectangle(frame, (x - 10, y - 10), (x + w + 10, y + h + 10), color, thickness=2)
 
                     # 文字提示是谁
-                    cv2.putText(frame, 'LiLulin',
+                    cv2.putText(frame, 'Person 1',
                                 (x + 30, y + 30),  # 坐标
                                 cv2.FONT_HERSHEY_SIMPLEX,  # 字体
                                 1,  # 字号
@@ -57,7 +57,7 @@ if __name__ == '__main__':
                                 2)  # 字的线宽
                 elif faceID == 1:
                     cv2.rectangle(frame, (x - 10, y - 10), (x + w + 10, y + h + 10), color, thickness=2)
-                    cv2.putText(frame, 'LiJianlin',
+                    cv2.putText(frame, 'Person 2',
                                 (x + 30, y + 30),  # 坐标
                                 cv2.FONT_HERSHEY_SIMPLEX,  # 字体
                                 1,  # 字号
@@ -65,7 +65,7 @@ if __name__ == '__main__':
                                 2)  # 字的线宽
                 elif faceID == 2:
                     cv2.rectangle(frame, (x - 10, y - 10), (x + w + 10, y + h + 10), color, thickness=2)
-                    cv2.putText(frame, 'MaXiaoming',
+                    cv2.putText(frame, 'Person 3',
                                 (x + 30, y + 30),  # 坐标
                                 cv2.FONT_HERSHEY_SIMPLEX,  # 字体
                                 1,  # 字号

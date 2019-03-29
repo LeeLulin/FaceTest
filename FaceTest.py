@@ -1,6 +1,6 @@
 import cv2
 
-face = cv2.CascadeClassifier('/home/student/桌面/haarcascade_frontalface_alt.xml')
+face = cv2.CascadeClassifier('./haarcascade_frontalface_alt.xml')
 camera = cv2.VideoCapture(0)
 cv2.namedWindow('camera')
 

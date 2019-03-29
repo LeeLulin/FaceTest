@@ -84,4 +84,4 @@ if __name__ == '__main__':
     if len(sys.argv) != 1:
         print("Usage:%s path_name\r\n" % (sys.argv[0]))
     else:
-        images, labels = load_dataset("/home/student/PycharmProjects/FaceTest/faceImage/")
+        images, labels = load_dataset("./faceImage/")
